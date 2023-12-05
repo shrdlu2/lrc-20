@@ -93,7 +93,7 @@ Mint a deployed lrc-20.
     "p": "lrc-20",
     "op": "mint",
     "id": "3b313338fa0555aebeaf91d8db1ffebd74773c67c8ad5181ff3d3f51e21e0000_1",
-    "amt": 10000,
+    "amt": 10000
 }
 ```
 
@@ -123,7 +123,7 @@ Transfer a deployed lrc-20.
     "p": "lrc-20",
     "op": "transfer",
     "id": "3b313338fa0555aebeaf91d8db1ffebd74773c67c8ad5181ff3d3f51e21e0000_1",
-    "amt": 10000,
+    "amt": 10000
 }
 ```
 
