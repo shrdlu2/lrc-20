@@ -16,12 +16,7 @@ There are 3 kinds of transactions:
 
 ## Transactions
 
-All lrc-20 transactions are both 1sat and lock transactions. They have:
-
-1. At least one 1sat inscription for an lrc-20 operation
-2. At least one [sat lockup script](https://github.com/shruggr/lockup) as a signal of value
-
-The order of outputs does not matter but if either is missing the transaction is invalid.
+Transactions in lrc-20 use 1sat inscriptions to denote their operation.
 
 Inscriptions follow the [1sat ordinals spec](https://docs.1satordinals.com/). Typically they will be `1SAT_P2PKH` scripts:
 
@@ -32,7 +27,7 @@ OP_FALSE OP_IF "ord" OP_1 <content-type> OP_0 <data> OP_ENDIF
 
 The content-type is `application/json`. The data is a [valid JSON object](https://www.json.org/json-en.html). 
 
-Mint transactions must lock at least the amount defined in deploy to be valid. For other operations, locking 1 satoshi for any duration is ok. Lrc-20s may lose the right to their ticker if another lrc-20 gets more locked up, so it is recommended when possible for even deploys and transfers to have non-minimal locks.
+In addition, mint transactions are required to have at least one [sat lockup script](https://github.com/shruggr/lockup). Mints must lock at least the amount defined in deploy to be valid. The order of outputs does not matter.
 
 Combinations of deploys and transfers in a transaction are ok. If one lrc-20 operation is invalid, it does not invalidate the others. Mints however must always be in their own transaction.
 
