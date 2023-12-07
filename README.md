@@ -72,7 +72,7 @@ Define a new lrc-20.
 | dec    | no       | number     | Decimals: Decimal shift for display. Defaults to 0.                           |
 | lim    | yes      | number     | Mint limit: Limit on tokens minted per user mint operation                    |
 | sats   | yes      | number     | Lock amount: Minimum amount of satoshis locked to be a valid mint             |
-| blocks | yes      | number     | Lock blocks: Minimum number of blocks locked to be a valid mint  		 |
+| blocks | yes      | number     | Lock blocks: Minimum number of blocks locked to be a valid mint  		     |
 
 #### Notes
 
@@ -81,6 +81,7 @@ Define a new lrc-20.
 * Compared to bsv-20, `max`, `dec`, and `limit` are numbers, not strings, reducing ambiguity
 * Maximum supply cannot exceed 2^64 - 1
 * Number of decimals cannot exceed 18
+* Some JSON implementations like JavaScript's `JSON.parse` lose precision above 2^53. Using a library is recommended.
 
 ### Mint
 
