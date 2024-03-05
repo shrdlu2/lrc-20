@@ -64,7 +64,7 @@ Define a new lrc-20.
 | op     | yes      | string     | Operation: `"deploy"`                                                         |
 | tick   | yes      | string     | Ticker: 4-letter identifier of the lrc-20                                     |
 | max    | yes      | number     | Max supply: Total number of tokens to be minted                               |
-| dec    | no       | number     | Decimals: Decimal shift for display. Defaults to 0.                           |
+| dec    | no       | number     | Decimals: Decimal shift for display. Defaults to 18.                           |
 | lim    | yes      | number     | Mint limit: Limit on tokens minted per user mint operation                    |
 | sats   | yes      | number     | Lock amount: Minimum amount of satoshis locked to be a valid mint             |
 | blocks | yes      | number     | Lock blocks: Minimum number of blocks locked to be a valid mint  		     |
