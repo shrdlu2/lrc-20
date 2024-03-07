@@ -46,6 +46,8 @@ Combinations of deploys and transfers in a transaction are ok. If one lrc-20 ope
 
 Define a new lrc-20.
 
+[Example transaction](https://whatsonchain.com/tx/bfd3bfe2d65a131e9792ee04a2da9594d9dc8741a7ab362c11945bfc368d2063)
+
 ```json
 {
     "p": "lrc-20",
@@ -81,6 +83,8 @@ Define a new lrc-20.
 ### Mint
 
 Mint a deployed lrc-20.
+
+[Example transaction](https://whatsonchain.com/tx/de3f1f7ddce0a6e79f7fa3d576681ccf506bcb0556cdc2cf5e69553a1de6a4f3)
 
 **Important: Spending mint inscriptions without proper transfer inscriptions will result in a burn**
 
@@ -136,6 +140,10 @@ Transfer a deployed lrc-20.
 * `amt` must parse to a non-negative integer
 * Compared to bsv-20, `amt` is always a number, not a string
 * If `amt` is more than the remaining input tokens, that operation is invalid
+
+#### Implied Transfers
+
+Implied transfers are transactions that move tokens without an inscription. Under ordinal theory, this is allowed since an inscription is linked to its ordinal. The new output must be a 1sat ordinal. The moved inscription is invalid if it is consumed at all as part of an earlier transfer inscription.
 
 ## Determining tickers
 
